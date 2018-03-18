@@ -1,16 +1,15 @@
 import React from 'react';
 
-export class Header extends React.Component {
-    render() {
+//stateless component
+export const Header = (props) => {
         return(
             <nav className="navbar navbar-default">
                 <div className="container">
                     <ul className="nav navbar-nav">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#">{props.homeLink}</a></li>
                     </ul>
                 </div>
             </nav>
         );
-    }
 }
 
