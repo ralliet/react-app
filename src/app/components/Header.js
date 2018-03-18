@@ -1,15 +1,17 @@
-import React from 'react';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-//stateless component
-export const Header = (props) => {
-        return(
-            <nav className="navbar navbar-default">
-                <div className="container">
-                    <ul className="nav navbar-nav">
-                        <li><a href="#">{props.homeLink}</a></li>
-                    </ul>
-                </div>
-            </nav>
-        );
-}
+// The Header creates links that can be used to navigate
+// between routes.
+const Header = () => (
+  <header>
+    <nav>
+      <ul>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/user'>User</Link></li>
+      </ul>
+    </nav>
+  </header>
+)
 
+export default Header
